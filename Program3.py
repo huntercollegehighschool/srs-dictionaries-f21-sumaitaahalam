@@ -15,4 +15,13 @@ addtobag(mybag, newloot)
 
 '''
 def addtobag(bag, itemstoadd):
-  pass #delete this line when you start writing your code
+  currentbag={}
+  for items in bag:
+    bag.setdefault(items, 0)
+    bag[items]+=1
+    championsloot={}
+    addtobag(currentbag, championsloot)
+    return bag
+
+    
+  
